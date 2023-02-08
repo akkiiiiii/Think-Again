@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint android:id="@+id/background_blue" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@id/background_blue" />
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start"
+        app:autoTransition="animateToEnd"
+        app:duration="1000">
+        <KeyFrameSet >
+            <KeyAttribute
+                app:motionTarget="@+id/background_blue"
+                app:framePosition="10"
+                android:scaleX="20" />
+            <KeyAttribute
+                app:motionTarget="@+id/background_blue"
+                app:framePosition="10"
+                android:scaleY="20" />
+            <KeyAttribute
+                app:motionTarget="@+id/background_blue"
+                app:framePosition="30"
+                android:scaleX="25" />
+            <KeyAttribute
+                app:motionTarget="@+id/background_blue"
+                app:framePosition="30"
+                android:scaleY="25" />
+            <KeyAttribute
+                app:motionTarget="@+id/background_blue"
+                app:framePosition="100"
+                android:scaleY="100" />
+            <KeyAttribute
+                app:motionTarget="@+id/background_blue"
+                app:framePosition="100"
+                android:scaleX="100" />
+        </KeyFrameSet>
+
+
+    </Transition>
+</MotionScene>

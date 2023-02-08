@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/rate_us"
+        android:icon="@drawable/star_emote"
+        android:title="Rate Us"/>
+
+    <item
+        android:id="@+id/share"
+        android:icon="@drawable/share_emote"
+        android:title="Share Us"/>
+
+    <item
+        android:id="@+id/tutorial"
+        android:icon="@drawable/tutt"
+        android:title="Tutorial"/>
+
+    <item
+        android:id="@+id/about_us"
+        android:icon="@drawable/about_emote"
+        android:title="About Us"/>
+
+</menu>

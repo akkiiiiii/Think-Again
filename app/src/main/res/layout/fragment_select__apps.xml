@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lite_green"
+    tools:context=".Activity.ShowAndSelectApps"
+    app:layoutDescription="@xml/fragment_select__apps_scene">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:background="@color/lite_green"
+        app:cardCornerRadius="5dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        app:cardUseCompatPadding="true"
+        app:cardPreventCornerOverlap="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/total_app"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="@color/white"
+            android:background="@color/white"
+            app:cardCornerRadius="2dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/total_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Applications = 178"
+                android:textColor="@color/light_black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/heading"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <View
+                android:id="@+id/boarder"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="#18152C0D"
+                android:layout_marginEnd="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/total_count"
+                app:layout_constraintTop_toBottomOf="@id/total_count" />
+
+
+            <TextView
+                android:id="@+id/locked_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/heading"
+                android:text="Locked Applications = 27"
+                android:textColor="@color/light_black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/boarder"
+                app:layout_constraintTop_toBottomOf="@+id/boarder" />
+
+
+            <View
+                android:id="@+id/boarder_1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="5dp"
+                android:background="#18152C0D"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/total_count"
+                app:layout_constraintTop_toBottomOf="@+id/locked_count" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/stop_start_service_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Off"
+                android:elevation="10dp"
+                android:background="@drawable/red_circular_round_bg"
+                android:textColor="@color/white"
+                android:padding="5dp"
+                app:layout_constraintBottom_toTopOf="@+id/quote"
+                app:layout_constraintStart_toStartOf="@+id/locked_count"
+                app:layout_constraintTop_toBottomOf="@+id/boarder_1" />
+
+            <TextView
+                android:id="@+id/quote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/heading"
+                android:text="No More Distraction Now."
+                android:textColor="@color/light_black"
+                android:textSize="15sp"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/boarder" />
+
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/anim"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/pumpkin" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/recycleview_parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="5dp"
+        android:layout_marginBottom="-3dp"
+        app:cardElevation="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ShowAppView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:listitem="@layout/holder_app_view" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

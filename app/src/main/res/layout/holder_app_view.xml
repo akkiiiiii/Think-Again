@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="80dp">
+
+        <ImageView
+            android:id="@+id/app_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_marginStart="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/text_container"
+            android:layout_width="0dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/app_icon"
+            app:layout_constraintEnd_toStartOf="@+id/lock_image"
+            app:layout_constraintStart_toEndOf="@+id/app_icon"
+            app:layout_constraintTop_toTopOf="@+id/app_icon">
+
+
+            <TextView
+                android:id="@+id/app_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Stylo Wallpaper"
+                android:textColor="@color/blue_lite"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/text_container" />
+
+
+            <TextView
+                android:id="@+id/package_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="com.nightowl.stylo"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:textColor="@color/blue_lite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/app_name"
+                app:layout_constraintTop_toBottomOf="@+id/app_name" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <ImageView
+            android:id="@+id/lock_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="4dp"
+            android:checked="true"
+            android:visibility="invisible"
+            android:src="@drawable/lock_not_emote"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/text_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/text_container" />
+
+
+        <ImageView
+            android:id="@+id/unlock_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="4dp"
+            android:checked="true"
+            android:visibility="invisible"
+            android:src="@drawable/unlock_not_emote"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/text_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/text_container" />
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#18152C0D"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/lock_image"
+            app:layout_constraintStart_toStartOf="@+id/text_container"
+            app:layout_constraintTop_toBottomOf="@+id/text_container" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

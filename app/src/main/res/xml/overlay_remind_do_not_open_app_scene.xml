@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint android:id="@+id/layout_1" />
+        <Constraint
+            android:layout_height="1dp"
+            app:layout_constraintStart_toStartOf="@id/parent_motion_lay"
+            app:layout_constraintTop_toTopOf="@id/parent_motion_lay"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/parent_motion_lay"
+            android:layout_width="match_parent"
+            android:id="@+id/layout_2"
+            app:layout_constraintVertical_bias="1.0" />
+        <Constraint
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="50dp"
+            app:layout_constraintBottom_toTopOf="@+id/up_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/notice_txt"
+            android:id="@+id/counter_txt" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@id/layout_1" />
+        <Constraint
+            android:id="@+id/layout_2"
+            app:layout_constraintEnd_toEndOf="@id/parent_motion_lay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:layout_constraintTop_toTopOf="@id/parent_motion_lay"
+            app:layout_constraintStart_toStartOf="@id/parent_motion_lay" />
+        <Constraint
+            android:id="@+id/layout_2"
+            app:layout_constraintEnd_toEndOf="@id/parent_motion_lay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:layout_constraintTop_toTopOf="@id/parent_motion_lay"
+            app:layout_constraintStart_toStartOf="@id/parent_motion_lay" />
+        <Constraint
+            android:layout_height="150dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="150dp"
+            android:id="@+id/anim_1" />
+        <Constraint
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:id="@+id/continue_txt"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/anim_1"
+            android:layout_marginEnd="50dp" />
+        <Constraint
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="50dp"
+            app:layout_constraintBottom_toTopOf="@+id/up_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/notice_txt"
+            android:id="@+id/counter_txt" />
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start"
+        app:autoTransition="animateToEnd"
+        app:duration="39000" >
+    </Transition>
+</MotionScene>

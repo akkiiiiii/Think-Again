@@ -1,0 +1,36 @@
+package com.nightowl.ThinkAgain.Classes;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.lifecycle.Lifecycle;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
+
+import com.nightowl.ThinkAgain.Fragments.Select_Apps;
+
+public class ViewpagerStateAdpter extends FragmentStateAdapter
+{
+
+
+    public ViewpagerStateAdpter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle) {
+        super(fragmentManager, lifecycle);
+    }
+
+    @NonNull
+    @Override
+    public Fragment createFragment(int position) {
+        switch (position){
+
+            case 0:
+                return new Select_Apps();
+
+        }
+        return null;
+    }
+
+    @Override
+    public int getItemCount() {
+        return 1;
+    }
+}
